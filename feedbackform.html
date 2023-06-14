@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Feedback Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+  <style>
+    body {
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333333;
+    }
+
+    .form-group label {
+      font-weight: bold;
+      color: #333333;
+    }
+
+    .form-group input[type="email"],
+    .form-group input[type="text"],
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+    }
+
+    .form-group input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #1e90ff;
+      border: none;
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #005cbf;
+    }
+
+    .form-group input[type="text"]:hover,
+    .form-group textarea:hover,
+    .form-group select:hover {
+      border-color: #1e90ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Product Feedback Form</h1>
+    <p>Please take a few minutes to complete this feedback form. Your feedback will help us improve our product and provide a better experience for future users.</p>
+    <form action="submit_feedback.php" method="post">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your Email ID (optional)" name="email">
+      </div>
+
+      <div class="form-group">
+        <label for="department">Product:</label>
+        <input type="text" id="department" name="department" placeholder="Enter your Product Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="satisfaction">Overall Satisfaction:</label>
+        <select name="satisfaction">
+            <option value="" disabled selected>Select</option>
+          <option value="1">Very dissatisfied</option>
+          <option value="2">Dissatisfied</option>
+          <option value="3">Neutral</option>
+          <option value="4">Satisfied</option>
+          <option value="5">Very satisfied</option>
+        </select>
+      </div>
+
+
+      <!-- <div class="form-group">
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+          <option value="" disabled selected>Select</option>
+          <option value="5">Excellent</option>
+          <option value="4">Very Good</option>
+          <option value="3">Good</option>
+          <option value="2">Fair</option>
+          <option value="1">Poor</option>
+        </select>
+      </div> -->
+
+      <div class="form-group">
+        <label for="usability">Usability:</label>
+        <select id="usability" name="usability" required>
+          <option value="" disabled selected>Select</option>
+          <option value="5">Very Easy</option>
+          <option value="4">Easy</option>
+          <option value="3">Neutral</option>
+          <option value="2">Difficult</option>
+          <option value="1">Very Difficult</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="durability">Durability:</label>
+        <select id="durability" name="durability" required>
+          <option value="" disabled selected>Select</option>
+          <option value="5">Excellent</option>
+          <option value="4">Very Good</option>
+          <option value="3">Good</option>
+          <option value="2">Fair</option>
+          <option value="1">Poor</option>
+        </select>
+      </div>
+
+      
+
+      <div class="form-group">
+        <label for="recommend">Would you recommend this product to others?</label>
+        <select name="recommend">
+            <option value="" disabled selected>Select</option>
+          <option value="1">Definitely not</option>
+          <option value="2">Probably not</option>
+          <option value="3">Undecided</option>
+          <option value="4">Probably yes</option>
+          <option value="5">Definitely yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">What areas do you think need improvement?</label>
+        <textarea id="comments" name="comments"></textarea>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Submit Feedback">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
